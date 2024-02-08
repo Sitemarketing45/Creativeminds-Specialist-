@@ -1,0 +1,36 @@
+# gamazine.py
+
+class Gamazine:
+    def __init__(self, color):
+        self.color = color
+
+    def get_details(self):
+        return f"Gamazine color: {self.color}, manufactured by Gamazine Factory SA"
+
+# waterproofing.py
+
+class Waterproofing:
+    def __init__(self, material):
+        self.material = material
+
+    def get_details(self):
+        return f"Waterproofing material: {self.material}, expertly installed and supplied by Creativeminds-Specialist"
+
+# specialist.py
+
+from gamazine import Gamazine
+from waterproofing import Waterproofing
+
+class CreativemindsSpecialist:
+    def __init__(self):
+        self.gamazine = Gamazine("blue")
+        self.waterproofing = Waterproofing("polyurethane")
+
+    def offer_services(self):
+        print("Creativeminds-Specialist offers the following services:")
+        print(self.gamazine.get_details())
+        print(self.waterproofing.get_details())
+
+if __name__ == "__main__":
+    specialist = CreativemindsSpecialist()
+    specialist.offer_services()
